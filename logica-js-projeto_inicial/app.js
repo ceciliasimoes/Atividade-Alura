@@ -1,12 +1,12 @@
 alert("Boas vindas ao jogo do número secreto!");
 let numeroSecreto = 29;
-console.log(numeroSecreto);
 var numeroEscolhido; 
-let contadorTentativas = 1;
+let contadorTentativas = parseInt(Math.random()*100+1);
+console.log(numeroSecreto);
 
 
 while(numeroEscolhido != numeroSecreto){
-    numeroEscolhido = window.prompt("Escolha um número entre um e trinta:");
+    numeroEscolhido = window.prompt("Escolha um número entre um e cem:");
     //se o user colocar o múmero certo, ele exibe
     if(numeroSecreto == numeroEscolhido ){
         break;//pare o loop aq caso ele acerte
@@ -23,8 +23,10 @@ while(numeroEscolhido != numeroSecreto){
 
 //operador ternário
 
-let palavraMensagem = contadorTentativas > 1 ? 'tentativas':'tentativa';
+let palavraMensagem = contadorTentativas > 1 ? 'tentativas':'tentativa'; //cria a variavel da palavra e pergunta se maior que um, se sim faz no plural e senão (:) no singular
     alert(`Você descobriu o Número Secreto ${numeroSecreto} em ${contadorTentativas} ${palavraMensagem}!`);
+
+
 
 /*
 if(contadorTentativas>1){
