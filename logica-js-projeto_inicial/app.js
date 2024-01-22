@@ -9,7 +9,7 @@ while(numeroEscolhido != numeroSecreto){
     numeroEscolhido = window.prompt("Escolha um número entre um e trinta:");
     //se o user colocar o múmero certo, ele exibe
     if(numeroSecreto == numeroEscolhido ){
-        break;
+        break;//pare o loop aq caso ele acerte
     } else{
         
         if(numeroEscolhido > numeroSecreto){
@@ -21,4 +21,9 @@ while(numeroEscolhido != numeroSecreto){
     }
 }
 
+if(contadorTentativas>1){
 alert(`Você descobriu o Número Secreto ${numeroSecreto} em ${contadorTentativas} tentativas!`);
+}else{
+    alert(`Você descobriu o Número Secreto ${numeroSecreto} em ${contadorTentativas} tentativa!`);
+
+}
