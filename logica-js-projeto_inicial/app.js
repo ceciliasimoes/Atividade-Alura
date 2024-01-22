@@ -1,12 +1,13 @@
 alert("Boas vindas ao jogo do número secreto!");
-let numeroSecreto = 29;
+let numeroMaximo = 500;
+let numeroSecreto = parseInt(Math.random()*numeroMaximo+1);
 var numeroEscolhido; 
-let contadorTentativas = parseInt(Math.random()*100+1);
+let contadorTentativas = 1;
 console.log(numeroSecreto);
 
 
 while(numeroEscolhido != numeroSecreto){
-    numeroEscolhido = window.prompt("Escolha um número entre um e cem:");
+    numeroEscolhido = window.prompt(`Escolha um número entre um e ${numeroMaximo}:`);
     //se o user colocar o múmero certo, ele exibe
     if(numeroSecreto == numeroEscolhido ){
         break;//pare o loop aq caso ele acerte
