@@ -2,7 +2,7 @@ alert("Boas vindas ao jogo do número secreto!");
 let numeroSecreto = 29;
 console.log(numeroSecreto);
 var numeroEscolhido; 
-let contadorTentativas = 0;
+let contadorTentativas = 1;
 
 
 while(numeroEscolhido != numeroSecreto){
@@ -21,9 +21,15 @@ while(numeroEscolhido != numeroSecreto){
     }
 }
 
+//operador ternário
+
+let palavraMensagem = contadorTentativas > 1 ? 'tentativas':'tentativa';
+    alert(`Você descobriu o Número Secreto ${numeroSecreto} em ${contadorTentativas} ${palavraMensagem}!`);
+
+/*
 if(contadorTentativas>1){
 alert(`Você descobriu o Número Secreto ${numeroSecreto} em ${contadorTentativas} tentativas!`);
 }else{
     alert(`Você descobriu o Número Secreto ${numeroSecreto} em ${contadorTentativas} tentativa!`);
 
-}
+}*/
